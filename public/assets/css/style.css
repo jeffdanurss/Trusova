@@ -1,0 +1,220 @@
+
+body { 
+  margin:0; 
+  font-family: 'Segoe UI', Roboto, sans-serif; 
+  background: #111; 
+  color: #f5f5f5; 
+}
+.container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+/* Header */
+.site-header { 
+  background: linear-gradient(90deg,#8B0000, #B22222); 
+  color: #FFD700; 
+  padding: 1rem 0;
+  border-bottom: 4px solid #FFD700; 
+}
+.header-inner { 
+  display: flex; 
+  align-items: center; 
+  justify-content: space-between; 
+  margin: 0 auto;
+  padding: 0 1rem; 
+}
+
+/* Logo */
+.logo { 
+  font-size: 1.5rem; 
+  font-weight: bold; 
+  color: #FFD700; 
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+.logo:hover { 
+  transform: scale(1.05); 
+}
+
+/* Buscador */
+.search-form { 
+  display: flex; 
+  gap: 0.5rem;
+}
+.search-form input { 
+  padding: 0.5rem; 
+  border: 2px solid #FFD700; 
+  border-radius: 4px;
+  background: #222;
+  color: #FFD700; 
+}
+.search-form input:focus { 
+  outline: none; 
+  border-color: #FF4500; 
+}
+.search-form button { 
+  padding: 0.5rem 1rem; 
+  border: none; 
+  background: #FFD700; 
+  color: #111; 
+  border-radius: 4px; 
+  cursor: pointer; 
+  transition: background 0.2s ease;
+  font-weight: bold;
+}
+.search-form button:hover { 
+  background: #FF4500; 
+  color: #fff; 
+}
+
+/* Navegacion */
+.main-nav a { 
+  margin-left: 1rem;
+  color:#FFD700;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+.main-nav a:hover { 
+  color: #FF6347; 
+}
+
+/* Accesibilidad */
+a:focus, input:focus, button:focus { 
+  outline: 2px solid #FFD700; 
+  outline-offset: 2px; 
+}
+
+/* Layout del catalogo */
+.catalog-layout { 
+  display: flex; 
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Filtros */
+.filters { 
+  flex: 0 0 250px;
+  background: #1a1a2e; 
+  padding: 1rem; 
+  border-radius: 8px; 
+  color: #FFD700;
+}
+.filters h3 { 
+  margin-top: 0; 
+  border-bottom: 2px solid #FFD700;
+  padding-bottom: 0.5rem;
+}
+.filters ul { 
+  list-style: none; 
+  padding: 0; 
+}
+.filters li {
+  margin: 0.5rem 0; 
+}
+.filters a { 
+  color: #FFD700; 
+  text-decoration: none; 
+}
+.filters a:hover { 
+  color: #FF6347; 
+}
+
+/* Grid de productos */
+.product-grid { 
+  flex:1;
+  display: grid; 
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+  gap: 1.5rem; 
+}
+/* Tarjeta de producto */
+.product-card { 
+  background:#222; 
+  border:2px solid #FFD700; 
+  border-radius:8px; 
+  overflow:hidden; 
+  text-decoration:none;
+  color:#f5f5f5;
+  transition: transform .2s, box-shadow .2s ease; 
+}
+.product-card:hover { 
+  transform: translateY(-5px); 
+  box-shadow: 0 6px 16px rgba(0,0,0,.04); 
+}
+.product-card img { 
+  width:100%; 
+  height:auto; 
+  display:block; 
+}
+.product-card-body { 
+  padding: 1rem; 
+}
+.product-card .brand { 
+  font-size:.75rem; 
+  text-transform:uppercase; 
+  color:#888; 
+}
+.product-card h4 { 
+  margin: 0.5rem 0; 
+  color: #FFD700;
+}
+.price { 
+  color: #FF6347;
+  font-weight:bold; 
+}
+.badge.out { 
+  display:inline-block;
+  background:#8B0000; 
+  color:#fff; 
+  padding:0.2rem 0.5rem; 
+  border-radius:4px; 
+  font-size:.75rem; 
+}
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  background: linear-gradient(135deg,#1a1a2e, #111);
+  border-top: 4px solid #FFD700;
+  position: relative;
+}
+.site-footer::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -20px;
+  left: 0;
+  width: 80px;
+  height: 3px;
+  margin: 0 auto;
+  background: #FFD700;
+  border-radius: 10px;
+}
+.footer-inner {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  text-align: center;
+}
+.footer-brand {
+  margin-bottom: 2rem;
+}
+.footer-logo {
+  display: inline-block;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #FFD700;
+  letter-spacing: 1px;
+}
+.footer-brand p {
+  margin: 0.5rem 0 0;
+  color: #aaa;
+  font-size: 0.9rem;
+}
+.footer-bottom {
+  padding-top: 1.2rem;
+  border-top: 1px solid rgba(255, 215, 0, 0.15);
+}
+.footer-bottom p {
+  margin: 0;
+  color: #777;
+  font-size: 0.8rem;
+}
+
+
+
