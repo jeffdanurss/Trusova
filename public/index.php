@@ -23,5 +23,13 @@ $router->post('/carrito/actualizar', function () {
 $router->post('/carrito/eliminar', function () {
     (new CartController())->remove();
 });
-
+$router->get('/checkout', function () {
+    (new CheckoutController())->show();
+});
+$router->post('/checkout', function () {
+    (new CheckoutController())->process();
+});
+$router->get('/pedido-confirmado/{id}', function ($params) {
+    (new CheckoutController())->confirmation($params);
+});
 $router->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
