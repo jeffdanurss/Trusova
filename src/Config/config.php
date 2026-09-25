@@ -1,10 +1,17 @@
 <?php
 
-define('DB_HOST', 'localhost');
-define('DB_USER', 'postgres');
-define('DB_PASS', 'moskova1945');
-define('DB_NAME', 'trusova');   
-define('DB_PORT', '5432');
-define('BASE_URL', 'http://127.0.0.1:8000');
-define('SITE_NAME', 'Trusova Relojes');
+require_once __DIR__ . '/../../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../../');
+$dotenv->load();
+
+define('DB_HOST', $_ENV['DB_HOST']);
+define('DB_USER', $_ENV['DB_USER']);
+define('DB_PASS', $_ENV['DB_PASS']);
+define('DB_NAME', $_ENV['DB_NAME']);
+define('DB_PORT', $_ENV['DB_PORT']);
+define('BASE_URL', $_ENV['BASE_URL']);
+define('SITE_NAME', $_ENV['SITE_NAME']);
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
 ?>

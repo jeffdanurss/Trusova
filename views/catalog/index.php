@@ -15,7 +15,9 @@
         <h3>Marcas</h3>
         <ul>
             <?php foreach ($brands as $brand): ?>
-                <li><a href="<?= BASE_URL ?>/?brand=<?= $brand['id'] ?>"><?= htmlspecialchars($brand['name']) ?></a></li>
+                <li>
+                    <a href="<?= BASE_URL ?>/?brand=<?= $brand['id'] ?>"><?= htmlspecialchars($brand['name']) ?></a>
+                </li>
             <?php endforeach; ?>
         </ul>
     </aside>
