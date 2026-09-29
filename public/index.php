@@ -32,4 +32,19 @@ $router->post('/checkout', function () {
 $router->get('/pedido-confirmado/{id}', function ($params) {
     (new CheckoutController())->confirmation($params);
 });
+$router->get('/login', function () {
+    (new AuthController())->showLogin();
+});
+$router->post('/login', function () {
+    (new AuthController())->login();
+});
+$router->get('/registro', function () {
+    (new AuthController())->showRegister();
+});
+$router->post('/registro', function () {
+    (new AuthController())->register();
+});
+$router->get('/logout', function () {
+    (new AuthController())->logout();
+});
 $router->dispatch($_SERVER['REQUEST_METHOD'], $_SERVER['REQUEST_URI']);
